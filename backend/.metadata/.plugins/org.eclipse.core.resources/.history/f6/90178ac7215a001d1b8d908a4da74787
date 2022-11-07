@@ -1,0 +1,14 @@
+package com.hcm.payload.request;
+
+import java.util.List;
+
+import com.hcm.entity.submittedClaim;
+
+import lombok.Data;
+
+@Data
+public class SubmitClaimRequest {
+	
+	private List<submittedClaim> claims;
+
+}

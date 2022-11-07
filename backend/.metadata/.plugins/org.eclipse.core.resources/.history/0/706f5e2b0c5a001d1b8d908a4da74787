@@ -1,0 +1,9 @@
+package com.hcm.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.hcm.entity.submittedClaim;
+
+public interface SubmittedClaimRepository extends JpaRepository<submittedClaim, Long> {
+
+}

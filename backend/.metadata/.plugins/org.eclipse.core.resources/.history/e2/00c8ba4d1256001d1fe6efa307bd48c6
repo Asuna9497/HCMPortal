@@ -1,0 +1,49 @@
+package com.hcm.serviceImpl;
+
+import java.util.List;
+import java.util.Random;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hcm.entity.Member;
+import com.hcm.entity.Physician;
+import com.hcm.repository.MemberRepository;
+import com.hcm.repository.PhysicianRepository;
+import com.hcm.service.MemberService;
+
+@Service
+public class MemberServiceImpl implements MemberService{
+	
+	@Autowired
+	MemberRepository memberRepository;
+	
+	@Autowired
+	PhysicianRepository physicianRepository;
+
+	@Override
+	public Member addMember(Member member) {
+	List<Physician> physicians = physicianRepository.findActivePhysician();
+	Random index = new Random();
+	Physician physician = physicians.get(index.nextInt(physicians.size()));
+	member.setPhysician(physician);
+	memberRepository.save(member);  
+	physician.setActive(false);
+	physicianRepository.save(physician);
+		
+		return member;
+	}
+
+	@Override
+	public List<Member> getAllMembers() {
+		return memberRepository.findAll();
+	}
+
+	@Override
+	public List<Member> getMembers(Long memberId, String firstName, String LastName, String pysicianName,
+			Long claimId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.hcm.payload.request;
+
+import javax.validation.constraints.*;
+
+import com.hcm.annotation.ValidPassword;
+
+import lombok.Data;
+ 
+@Data
+public class SignupRequest {
+    @NotBlank
+    @Size(min = 3, max = 20)
+    private String username;
+     
+    private String role;
+    
+    @NotBlank
+    @ValidPassword
+    private String password;
+  
+    public String getUsername() {
+        return username;
+    }
+ 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+}

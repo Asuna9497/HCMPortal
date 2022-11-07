@@ -1,0 +1,18 @@
+package com.hcm.payload.request;
+
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlElement;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.hcm.entity.Claim;
+
+import lombok.Data;
+
+@Data
+public class SubmitClaimRequest {
+	@JsonProperty( "parameter" )
+	@XmlElement( required = true )
+	private List<Claim> claims;
+
+}

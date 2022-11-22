@@ -1,1 +1,3 @@
 "# HCMPortal" 
+INSERT INTO roles(name) VALUES('ROLE_MEMBER');
+INSERT INTO roles(name) VALUES('ROLE_ADMIN');

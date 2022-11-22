@@ -1,7 +1,0 @@
-package com.hcm.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface PhysicianRepository extends JpaRepository<T, ID> {
-
-}

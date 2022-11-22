@@ -1,7 +1,0 @@
-package com.hcm.entity;
-
-@Data
-@Entity
-public class Physician {
-
-}

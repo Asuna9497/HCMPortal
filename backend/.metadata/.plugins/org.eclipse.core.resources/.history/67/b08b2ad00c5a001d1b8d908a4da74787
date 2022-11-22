@@ -1,5 +1,0 @@
-package com.hcm.payload.request;
-
-public class SubmitClaimRequest {
-
-}

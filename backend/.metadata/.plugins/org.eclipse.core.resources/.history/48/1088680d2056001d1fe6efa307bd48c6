@@ -1,5 +1,0 @@
-package com.hcm.payload.response;
-
-public class MessageResponse {
-
-}

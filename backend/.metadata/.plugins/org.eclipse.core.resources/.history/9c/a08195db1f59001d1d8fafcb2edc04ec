@@ -1,9 +1,0 @@
-package com.hcm.service;
-
-import com.hcm.entity.Claim;
-
-public interface ClaimService {
-	
-	public Claim addClaim(Claim claim);
-
-}
